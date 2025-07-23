@@ -13,4 +13,16 @@ for _ in range(n):
         d.popleft()
         
 print(*d)
+
+
+
+from collections import deque
+
+d = deque()
+
+for _ in range(int(input())):
+    op, *args = input().rsplit()
+    getattr(d, op)(*args)
+
+print(*d)
     
