@@ -12,3 +12,16 @@ ORDER BY (
     FROM Packages P2
     WHERE P2.ID = F.Friend_ID
 );
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+SELECT S.NAME
+FROM STUDENTS AS S 
+JOIN FRIENDS AS F
+ON F.ID=S.ID
+JOIN PACKAGES AS P1
+ON S.ID=P1.ID
+JOIN PACKAGES AS P2
+ON F.FRIEND_ID=P2.ID
+WHERE P2.SALARY>P1.SALARY
+ORDER BY P2.SALARY;
