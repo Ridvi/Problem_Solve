@@ -9,3 +9,5 @@ class Solution:
             else:
                 freq = freq -1
         return ans
+
+#moores voting algo
